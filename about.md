@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I am a London based freelance iOS, watchOS, and tvOS engineer and consultant with a over 7 years of experience with both big brands and small businesses.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[sam@swiftbuildr.com](mailto:sam@swiftbuildr.com)

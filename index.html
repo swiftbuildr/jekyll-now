@@ -2,15 +2,15 @@
 layout: default
 ---
 
-<div class="whatsgoingon"> 
-<p>We are a London based freelance iOS, watchOS, and tvOS engineer consultantsy with a over 7 years of experience with both big brands and small businesses.</p>
-</div>
-
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <h1>
+      	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      	{{ post.date }}
+  	</h1>
+
 
       <div class="entry">
         {{ post.excerpt }}
