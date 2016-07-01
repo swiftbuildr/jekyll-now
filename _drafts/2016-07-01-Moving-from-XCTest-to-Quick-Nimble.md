@@ -1,47 +1,51 @@
 ---
 layout: post
-title: Solving Fizz Buzz in Swift
+title: Solving FizzBuzz in Swift
 ---
 
-Fizz Buzz is a classic engineering interview problem. Here's why you should know of it and be able to solve it. It's often used to quickly filter out candidates from the interview process and evaluate initial reasoning skills. All software engineers should know a solution to this problem.
+FizzBuzz is a classic engineering interview problem. All software engineers should know a solution to this problem. Here's why you should know it and be able to solve it.
+
+FizzBuzz is often used to quickly filter out candidates from the interview process and evaluate initial reasoning skills. If you fail to solve FizzBuzz, the odds are going to be against you progressing further.
 
 ### The problem
-This is how to FizzBuzz problem will usually be presented:
+The FizzBuzz problem will usually look something like this:
 
 >Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
 
 ### Breaking down the problem using 'Divide and Conquer'
 By reading the problem, we can deduce that there are four different cases to solve, three of which require the test: "Is `X` a multiple of `Y`".
 
-#### Multiples Problem
+#### The multiples problem
 3/4 cases require a solution to the problem: "Is `X` a multiple of `Y`".
 
 This is solved using the modulo operator `%`.
 
 ```
-If X modulo Y equals 0, then X is a multiple of Y.
+If X modulo Y equals 0, then Y is a multiple of X.
 ```
 
-#### Problems
-1.  Print the `n` when it is __not a multiple of 3 *or* 5__.
-2.  Print __"Fizz"__ when the `n` is a __multiple of 3 but not 5__.
+#### Sub problems
+1.  Print `n` when it is __not a multiple of 3 *or* 5__.
+2.  Print __"Fizz"__ when `n` is a __multiple of 3 but not 5__.
 
     ```swift
     n % 3 == 0
     ```
 
-3.  Print __"Buzz"__ when the `n` is a __multiple of 5 but not 3__
+3.  Print __"Buzz"__ when `n` is a __multiple of 5 but not 3__
 
     ```swift
     n % 5 == 0
     ```
-4.  Print __"FizzBuzz"__ when the `n` is a __multiple of both 5 *and* 3__
+4.  Print __"FizzBuzz"__ when `n` is a __multiple of both 5 *and* 3__
 
     ```swift
     n % 3 == 0 && n % 5 == 0
     ```
 
-### Complete Solution 
+### Complete Solution
+Here is a solution to FizzBuzz in Swift.
+
 By returning a `String` from the `FizzBuzz(:)` function, rather than printing from within, the function becomes testable.  
 
 ```swift
@@ -85,5 +89,10 @@ func testThatNumbersThatAreNotFactorsOfThreeOrFiveOutputThemselves() {
     XCTAssertEquals(FizzBuzz(1), "1")
     XCTAssertEquals(FizzBuzz(2), "2")
     XCTAssertEquals(FizzBuzz(7), "7")
+}
+
+func testMaxAndMinBoundaries() {
+    XCTAssertEquals(FizzBuzz(1), "1")
+    XCTAssertEquals(FizzBuzz(100), "Buzz")
 }
 ```
