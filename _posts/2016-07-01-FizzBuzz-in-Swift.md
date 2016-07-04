@@ -8,11 +8,12 @@ FizzBuzz is a classic engineering interview problem. All software engineers shou
 FizzBuzz is often used to quickly filter out candidates from the interview process and evaluate initial reasoning skills. If you fail to solve FizzBuzz, the odds are going to be against you progressing further.
 
 ### The problem
-The FizzBuzz problem will usually look something like this:
+The [FizzBuzz problem](https://en.wikipedia.org/wiki/Fizz_buzz) will usually look something like this:
+
 
 >Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
 
-### Breaking down the problem using 'Divide and Conquer'
+### Breaking down the problem into subproblems
 By reading the problem, we can deduce that there are four different cases to solve, three of which require the test: "Is `X` a multiple of `Y`".
 
 #### The multiples problem
@@ -44,29 +45,9 @@ If X modulo Y equals 0, then Y is a multiple of X.
     ```
 
 ### Complete Solution
-Here is a solution to FizzBuzz in Swift.
+Based upon our understanding of the problem, we can create some test cases. This will validate our solution as we build it.
 
-By returning a `String` from the `FizzBuzz(:)` function, rather than printing to console from within, the function becomes testable.  
-
-```swift
-func FizzBuzz(i: Int) -> String {
-    if i % 3 == 0 && i % 5 == 0 {
-        return "FizzBuzz"
-    } else if i % 3 == 0 {
-        return "Fizz"
-    } else if i % 5 == 0 {
-        return "Buzz"
-    } else {
-        return "\(i)"
-    }
-}
-
-for i in 1...100 {
-    print(FizzBuzz(i))
-} 
-```
-
-## Test cases
+#### Test cases
 ```swift
 func testThatFactorsOfThreeOutputFizz() {
     XCTAssertEquals(FizzBuzz(3), "Fizz")
@@ -95,4 +76,27 @@ func testMaxAndMinBoundaries() {
     XCTAssertEquals(FizzBuzz(1), "1")
     XCTAssertEquals(FizzBuzz(100), "Buzz")
 }
+```
+
+#### Implementation
+Here is a solution to FizzBuzz in Swift.
+
+By returning a `String` from the `FizzBuzz(:)` function, rather than printing to console from within, the function becomes testable.  
+
+```swift
+func FizzBuzz(i: Int) -> String {
+    if i % 3 == 0 && i % 5 == 0 {
+        return "FizzBuzz"
+    } else if i % 3 == 0 {
+        return "Fizz"
+    } else if i % 5 == 0 {
+        return "Buzz"
+    } else {
+        return "\(i)"
+    }
+}
+
+for i in 1...100 {
+    print(FizzBuzz(i))
+} 
 ```
