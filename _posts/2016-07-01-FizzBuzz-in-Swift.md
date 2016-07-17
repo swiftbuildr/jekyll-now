@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Solving FizzBuzz in Swift
+title: FizzBuzz in Swift
 ---
-
+# `3='Fizz' 5='Buzz' 15='FizzBuzz'`
 FizzBuzz is a classic engineering interview problem. All software engineers should know a solution to this problem. Here's why you should know it and be able to solve it.
 
 FizzBuzz is often used to quickly filter out candidates from the interview process and evaluate initial reasoning skills. If you fail to solve FizzBuzz, the odds are going to be against you progressing further.

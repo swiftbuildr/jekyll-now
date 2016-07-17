@@ -1,0 +1,50 @@
+---
+layout: post
+title: One of the reasons for Protocol Oriented Programming
+---
+
+So lets say we have a class MusicService which has a method that goes away to the network and requests songs `func getSongs(:)`.
+
+This function has a completionBlock which is called when network has responded, either with an error, or with the model objects it has created.
+
+This all seems fine initially, but there is a problem; the problem is that this cannot be tested since we cannot control what the completionBlock returns.
+
+```swift {
+    class MusicService {
+        func getSongs(completionBlock: (songs: [Song]?, error: NSError?)) {
+
+        }
+    }
+}
+```
+
+```swift
+
+struct Song { 
+    let title: String
+    let artist: String
+    let album: String
+}
+
+enum MusicServicerErrors: ErrorType {
+    case NetworkFailed
+}
+
+protocol MusicServicer {
+    func getSongs(completionBlock: (songs: [Song]?, error: Error?)->())
+}
+
+struct MusicService: MusicServicer {
+    func getSongs(completionBlock: (songs: [Song]?, error: Error?)->()) {
+
+        // fetch data from network
+        completion(songs: songs, error: nil)
+    }   
+}
+
+struct MockMusicService: MusicServicer {
+    func getSongs(completionBlock: (songs: [Song]?, error: Error?)->()) {
+        completion(songs: [Song(),Song(),Song()], error: nil)
+    }   
+}
+```
