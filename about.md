@@ -4,7 +4,12 @@ title: About
 permalink: /about/
 ---
 
-I am Sam Ward, a London based iOS, watchOS, and tvOS contract engineer and consultant with a over 7 years of experience with both big brands and small businesses.
+Swiftbuildr is a London based iOS, watchOS, and tvOS consultancy with a over seven years of experience with both big brands and small businesses.
+
+### High profile clients
+- John Lewis
+- Betfair
+- TrinityMirror (The Mirror newspaper)
 
 ### Contact me
 
