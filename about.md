@@ -13,4 +13,4 @@ Swiftbuildr is a London based iOS, watchOS, and tvOS consultancy with a over sev
 
 ### Contact me
 
-[sam@swiftbuildr.com](mailto:sam@swiftbuildr.com)Sam Ward
+[sam@swiftbuildr.com](mailto:sam@swiftbuildr.com)
