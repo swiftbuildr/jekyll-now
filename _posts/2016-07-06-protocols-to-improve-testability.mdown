@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Protocols to improve testability
+title: Protocols to improve testing
 ---
 
 Testing certain objects can be tough. Abstracting a classes functionality out to a protocol can make this easier.
@@ -12,7 +12,6 @@ This function has a completionBlock which is invoked when the network has respon
 By the use of protocols we've made the service easily testable. See below:
 
 ```swift
-
 struct Song { 
     let title: String
     let artist: String
