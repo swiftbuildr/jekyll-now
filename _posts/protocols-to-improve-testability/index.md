@@ -1,6 +1,9 @@
 ---
-layout: post
-title: Protocols to improve testing
+layout: blog-post
+title: Using protocols to improve testability
+date: "2018-02-06 05:30"
+description: How to use protocols improve the testability of your code
+tags: [unit-testing, protocols, mocking, testing]
 ---
 
 Testing certain objects can be tough. Abstracting a classes functionality out to a protocol can make this easier.
@@ -12,7 +15,7 @@ This function has a completionBlock which is invoked when the network has respon
 By the use of protocols we've made the service easily testable. See below:
 
 ```swift
-struct Song { 
+struct Song {
     let title: String
     let artist: String
     let album: String
@@ -29,12 +32,12 @@ struct NetworkMusicService: MusicService {
         // ....
         // ....
         completion(songs: songs, error: nil)
-    }   
+    }
 }
 
 struct MockMusicService: MusicService {
     func getSongs(completionBlock: (songs: [Song], error: Error?)->()) {
         completion(songs: [Song(),Song(),Song()], error: nil)
-    }   
+    }
 }
 ```
