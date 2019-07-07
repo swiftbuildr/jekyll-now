@@ -1,5 +1,5 @@
 ---
-layout: blog-post
+layout: post
 title: Setting up Universal Links and Site Association
 description: How to setup Universal Links?
 date: "2019-07-05 05:30"

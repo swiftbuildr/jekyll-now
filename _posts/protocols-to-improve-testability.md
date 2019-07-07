@@ -1,5 +1,5 @@
 ---
-layout: blog-post
+layout: post
 title: Using protocols to improve testability
 date: "2018-02-06 05:30"
 description: How to use protocols improve the testability of your code
