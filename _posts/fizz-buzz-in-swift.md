@@ -1,6 +1,7 @@
 ---
 layout: post
 title: FizzBuzz in Swift
+description: FizzBuzz is a classic engineering interview problem. All software engineers should know a solution to this problem. Here's why you should know it and be able to solve it.
 date: "2017-03-02 05:30"
 
 ---

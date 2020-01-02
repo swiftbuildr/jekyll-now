@@ -23,8 +23,8 @@ It's format is JSON.
 
 For example:
 
-swiftbuildr.com/.well-known/apple-app-site-association
-swiftbuildr.com/apple-app-site-association
+`swiftbuildr.com/.well-known/apple-app-site-association`
+`swiftbuildr.com/apple-app-site-association`
 
 ```json
 {
